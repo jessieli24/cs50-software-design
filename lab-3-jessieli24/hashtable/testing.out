@@ -1,0 +1,79 @@
+gcc -Wall -pedantic -std=c11 -ggdb    -c -o hashtabletest.o hashtabletest.c
+gcc -Wall -pedantic -std=c11 -ggdb    -c -o hashtable.o hashtable.c
+gcc -Wall -pedantic -std=c11 -ggdb    -c -o hash.o hash.c
+gcc -Wall -pedantic -std=c11 -ggdb  hashtabletest.o hashtable.o hash.o ../set/set.o ../lib/file.o ../lib/mem.o  -o hashtabletest
+./hashtabletest < test.names
+Create hashtable...
+
+Printing empty hashtable...
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+
+Test with null hashtable, good item...
+Test with null key...
+Test with null item...
+Test with null hashtable, null key, null item...
+
+Count (should be zero): 0
+'Alice' is a new key
+hashtable_insert inserted Alice, 16
+'Bob' is a new key
+hashtable_insert inserted Bob, 17
+'Alice' is already a key in the hashtable
+hashtable_insert failed to insert Alice
+'Charlie' is a new key
+hashtable_insert inserted Charlie, 19
+'Mickey' is a new key
+hashtable_insert inserted Mickey, 20
+'Mickey' is already a key in the hashtable
+hashtable_insert failed to insert Mickey
+'Mouse' is a new key
+hashtable_insert inserted Mouse, 22
+'Minnie' is a new key
+hashtable_insert inserted Minnie, 23
+'Donald' is a new key
+hashtable_insert inserted Donald, 24
+'Snoopy' is a new key
+hashtable_insert inserted Snoopy, 25
+'Alice' is already a key in the hashtable
+hashtable_insert failed to insert Alice
+'Goofy' is a new key
+hashtable_insert inserted Goofy, 27
+
+Count (should be 9): 9
+
+Testing hashtable_find with NULL hashtable...got NULL
+Testing hashtable_find with NULL key...got NULL
+
+The hashtable:
+{}
+{(Donald,24),(Mickey,20),(Charlie,19),}
+{}
+{(Snoopy,25),(Bob,17),}
+{(Minnie,23),(Alice,16),}
+{(Goofy,27),(Mouse,22),}
+{}
+
+
+Printing NULL hashtable...
+(null)
+
+Printing hashtable with NULL file pointer...
+
+
+Printing hashtable with NULL itemprint...
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+
+
+delete the hashtable...

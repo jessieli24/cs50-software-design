@@ -1,0 +1,48 @@
+./settest < test.names
+Create set...
+
+Printing empty set...
+{}
+
+Test with null set, good item...
+Test with null key...
+Test with null item...
+Test with null set, null key, null item...
+
+Count (should be zero): 0
+
+Testing set_find with a NULL set: NULL
+Testing set_find with a NULL key: NULL
+
+'Alice' is a new key
+set_insert inserted Alice, 16
+'Wonderland' is a new key
+set_insert inserted Wonderland, 17
+'Alice' is already a key in the set
+set_insert failed to insert Alice
+'Girl' is a new key
+set_insert inserted Girl, 19
+'Mickey' is a new key
+set_insert inserted Mickey, 20
+'Mouse' is a new key
+set_insert inserted Mouse, 21
+'Minnie' is a new key
+set_insert inserted Minnie, 22
+'Mouse' is already a key in the set
+set_insert failed to insert Mouse
+
+Count (should be 6): 6
+
+The set:
+{(Minnie,22),(Mouse,21),(Mickey,20),(Girl,19),(Wonderland,17),(Alice,16),}
+
+Printing NULL set...
+(null)
+
+Printing set with NULL file pointer...
+
+
+Printing set with NULL itemprint...
+{}
+
+delete the set...
